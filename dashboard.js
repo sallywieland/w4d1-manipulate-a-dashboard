@@ -15,9 +15,9 @@ console.log(images)
 
 var randomNumbers = document.querySelectorAll('.text-muted')
     randomNumbers.forEach(function(randomNumber) {
-        randomNumber.innerHTML = '$' + Math.round(Math.random() * 10) + '.00'
+        randomNumber.innerHTML = accounting.formatMoney(Math.round(Math.random() * 1000))
     })
-console.log(randomNumbers) // check out accounting.js
+console.log(randomNumbers)
 // 4. Change the currently selected left side menu item from Overview to Reports.
 
 var selectedItems = document.querySelectorAll('.nav-sidebar > li')
@@ -62,6 +62,7 @@ headerNames.forEach(function(headerName, i){
 console.dir(headerNames)
 
 // 9. Make an array of objects, each object representing a single row in the table. Remove the commas from the ID column and convert it to an actual Number data type. Example: [{id: 1001, firstName: 'Lorem', lastName: 'ipsum', department: 'dolor', client: 'sit'}]
+
 var objectArrays = document.querySelectorAll('tbody > tr')
 var array = []
 objectArrays.forEach(function(objectArray) {
